@@ -1,0 +1,226 @@
+/* MUSTACHE TOP IMAGE */
+.stache {
+    grid-area: mustache;
+    display: flex;
+    justify-content: center;
+}
+
+.stache > img:hover {
+    animation-name: rubberBand;
+    animation-duration: 3s;
+}
+
+.topimage {
+    width: 150px;
+    height: 75px;
+}
+
+/* HEADER */
+header {
+    grid-area: header;
+}
+
+h1 {
+    font-size: 40px;
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+    padding: 0 0 20px 0;
+    text-shadow: 2px 2px 2px teal;
+    animation-name: tada;
+    animation-duration: 2s;
+}
+/* END OF HEADER */
+
+
+/* NAVIGATION */
+nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    margin: 15px 15px;
+    font-family: 'Cuprum', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    animation-name: fadeInDown;
+    animation-duration: 3s;
+    animation-delay: 1.5s;
+}
+a:hover {
+    color: teal;
+}
+/* END OF NAVIGATION LINKS */
+
+
+/* MESSAGE AND MAIN PICTURE */
+.message {
+    grid-area: message;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url(./images/main.jpg);
+    background-size: cover;
+    height: 500px;
+}
+
+.first {
+    width: 26%;
+}
+
+.second {
+    width: 31%;
+}
+
+.third {
+    width: 35%;
+}
+
+.fourth {
+    width: 37%;
+}
+button {
+    width: 200px;
+    height: 35px;
+    margin: 10px 0 10px 25px;
+    font-family: 'Cuprum', sans-serif;
+    font-size: 20px;
+    background-color: teal;
+    color: white;
+    animation-name: lightSpeedIn;
+    animation-duration: 5s;
+    animation-delay: 4s;
+}
+.text {
+    background-color: white;
+    color: teal;
+    font-family: 'Cuprum', sans-serif;
+    font-size: 30px;
+    padding: 10px 5px;
+    margin: 10px 0 10px 25px;
+}
+/* END OF MESSAGE AND MAIN PICTURE */
+
+
+/* PICTURE FLEXBOX */
+.picbox {
+    grid-area: picbox;
+    display: flex;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+}
+
+.picture {
+    width: 27em;
+    border: 2px solid teal;
+}
+
+.types {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 20px 0px;
+}
+
+.types > p {
+    font-family: 'Cuprum', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+/* END OF PICTURE FLEXBOX */
+
+
+/* FOOTER */
+footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: teal;
+    height: 175px;
+}
+
+.foot > p {
+    font-family: 'Rokkitt', serif;
+    animation-name: fadeInLeftBig;
+    animation-duration: 5s;
+    animation-delay: 5s, 5s;
+    animation-fill-mode: forwards;
+}
+
+.icon > img {
+    width: 50px;
+    margin-top: 20px auto;   
+}
+/* END OF FOOTER */
+
+
+/* MEDIA QUERIES */
+@media (min-width: 320px) {
+    .message {
+        height: 100px;    
+    }
+
+    .text {
+        display: none;
+    }
+
+    .foot > p {
+        margin-left: 10px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "mustache mustache mustache mustache"
+        "header header header header"
+        "nav nav nav nav"
+        "message message message message"
+        "picbox picbox picbox picbox"
+        "footer footer footer footer" 
+    }
+    
+    h1 {
+        font-size: 70px;
+    }
+
+    .topimage {
+        width: 200px;
+        height: 100px;
+    }
+
+    a {
+        margin: 15px 20px;
+    }
+
+    .message {
+        height: 500px;
+    }
+
+    .text {
+        display: block;
+    }
+
+    button {
+        width: 250px;
+        height: 35px;
+    }
+
+    .picture {
+        /* width: 500px; */
+    }
+
+    footer {
+        height: 100px;
+    }
+}
+
